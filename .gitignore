@@ -107,8 +107,6 @@ Temporary Items
 ### macOS Patch ###
 *.icloud
 
-.claude/
-
 ### Maven ###
 target/
 pom.xml.tag
