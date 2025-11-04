@@ -3,7 +3,7 @@ package com.luv2code.designpatterns.behavioral.iterator;
 /**
  * Role: Client
  *
- * Demonstrates the Iterator design pattern in action.
+ * Demonstrates the Iterator design patter in action.
  * Uses the Iterator to traverse a CourseCatalog without
  * exposing the collection's internal structure.
  */
@@ -19,6 +19,7 @@ public class MainApp {
         courseCatalog.addCourse(new Course("Modern Spring Boot REST APIs"));
 
         // get a handle to the iterator
+        // PatternIterator<Course> courseIterator = courseCatalog.iterator();
         PatternIterator<Course> courseIterator = courseCatalog.reverseIterator();
 
         // use the iterator to loop through the courses, print course name
@@ -29,3 +30,15 @@ public class MainApp {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

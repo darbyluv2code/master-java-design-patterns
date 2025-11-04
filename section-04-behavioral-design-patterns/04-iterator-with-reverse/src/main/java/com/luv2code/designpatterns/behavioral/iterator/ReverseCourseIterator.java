@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 /**
  * Role: Concrete Iterator
  *
- * Implements traversal logic and maintains the
+ * Implements reverse traversal logic and maintains the
  * current position within the course list.
  */
 public class ReverseCourseIterator implements PatternIterator<Course> {
@@ -20,7 +20,7 @@ public class ReverseCourseIterator implements PatternIterator<Course> {
     }
 
     /**
-     * Return true if there is a next course, else false
+     * Returns true if there is a next course, else false
      */
     @Override
     public boolean hasNext() {

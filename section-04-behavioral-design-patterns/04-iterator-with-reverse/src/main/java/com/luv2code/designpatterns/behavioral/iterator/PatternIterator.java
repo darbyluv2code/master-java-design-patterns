@@ -8,6 +8,7 @@ package com.luv2code.designpatterns.behavioral.iterator;
 public interface PatternIterator<T> {
 
     boolean hasNext();
+
     T next();
 
 }

@@ -19,7 +19,7 @@ public class CourseIterator implements PatternIterator<Course> {
     }
 
     /**
-     * Return true if there is a next course, else false
+     * Returns true if there is a next course, else false
      */
     @Override
     public boolean hasNext() {
