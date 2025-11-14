@@ -17,8 +17,8 @@ public class MainApp {
         List<Course> courses = new ArrayList<>();
 
         Course course1 = new Course("JavaScript for Beginners", 4.8, 9800);
-        Course course2 = new Course("Advanced Game Development", 4.5, 5000);
-        Course course3 = new Course("Building Scalable Cloud Solutions", 4.9, 5000);
+        Course course2 = new Course("Advanced Game Development", 4.5, 4350);
+        Course course3 = new Course("Building Scalable Cloud Solutions", 4.9, 1200);
 
         courses.add(course1);
         courses.add(course2);
@@ -29,68 +29,30 @@ public class MainApp {
 
         System.out.println();
 
-        // Create sorter with initial strategy (default ascending order)
+        // Create sorter with initial strategy
         CourseSorter courseSorter = new CourseSorter(new NameSortStrategy());
 
-        System.out.println("=== Sort by name (ascending - default) ===");
+        System.out.println("=== Sort by name ===");
         courseSorter.sort(courses);
         displayCourses(courses);
 
         System.out.println();
 
-        // Change strategy at runtime with explicit descending order
-        System.out.println("=== Sort by name (descending) ===");
-        courseSorter.setSortStrategy(new NameSortStrategy(SortDirection.DESCENDING));
-        courseSorter.sort(courses);
-        displayCourses(courses);
-
-        System.out.println();
-
-        // Change to different sorting criteria with default ascending
-        System.out.println("=== Sort by rating (ascending - default) ===");
+        // Change strategy at runtime
+        System.out.println("=== Sort by rating ===");
         courseSorter.setSortStrategy(new RatingSortStrategy());
         courseSorter.sort(courses);
         displayCourses(courses);
 
         System.out.println();
 
-        // Change to descending
-        System.out.println("=== Sort by rating (descending) ===");
-        courseSorter.setSortStrategy(new RatingSortStrategy(SortDirection.DESCENDING));
-        courseSorter.sort(courses);
-        displayCourses(courses);
-
-        System.out.println();
-
-        // Sort by student count ascending
-        System.out.println("=== Sort by number of students (ascending - default) ===");
+        // Change strategy at runtime
+        System.out.println("=== Sort by number of students ===");
         courseSorter.setSortStrategy(new StudentCountSortStrategy());
         courseSorter.sort(courses);
         displayCourses(courses);
 
         System.out.println();
-
-        // Sort by student count descending
-        System.out.println("=== Sort by number of students (descending) ===");
-        courseSorter.setSortStrategy(new StudentCountSortStrategy(SortDirection.DESCENDING));
-        courseSorter.sort(courses);
-        displayCourses(courses);
-
-        System.out.println();
-
-        // Sort by student count AND rating (ascending)
-        System.out.println("=== Sort by number of students AND rating (ascending - default) ===");
-        courseSorter.setSortStrategy(new StudentCountAndRatingSortStrategy());
-        courseSorter.sort(courses);
-        displayCourses(courses);
-
-        System.out.println();
-
-        // Sort by student count AND rating (descending)
-        System.out.println("=== Sort by number of students AND rating (descending) ===");
-        courseSorter.setSortStrategy(new StudentCountAndRatingSortStrategy(SortDirection.DESCENDING));
-        courseSorter.sort(courses);
-        displayCourses(courses);
 
     }
 
