@@ -51,7 +51,7 @@ I'm looking forward to seeing you in other luv2code courses!
 
 &#8287;
 ## License
-This source code is provided for your personal learning and educational use as part of a course by [Luv2Code LLC](https://www.luv2code.com).
+This source code is provided for your personal learning and educational use as part of a course by [luv2code LLC](https://www.luv2code.com).
 
 You may use and modify the source code in your own personal projects and your work or professional projects, including commercial applications.
 
