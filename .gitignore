@@ -1,91 +1,15 @@
-# Created by https://www.toptal.com/developers/gitignore/api/java,macos,intellij+all,eclipse,maven
-# Edit at https://www.toptal.com/developers/gitignore?templates=java,macos,intellij+all,eclipse,maven
+################################################################################
+# Source code repository for luv2code training courses.
+# https://www.luv2code.com
+################################################################################
 
-### Eclipse ###
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-.recommenders
+################################################################################
+# OS-SPECIFIC FILES
+################################################################################
 
-# External tool builders
-.externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
-*.launch
-
-# PyDev specific (Python IDE for Eclipse)
-*.pydevproject
-
-# CDT-specific (C/C++ Development Tooling)
-.cproject
-
-# CDT- autotools
-.autotools
-
-# Java annotation processor (APT)
-.factorypath
-
-# PDT-specific (PHP Development Tools)
-.buildpath
-
-# sbteclipse plugin
-.target
-
-# Tern plugin
-.tern-project
-
-# TeXlipse plugin
-.texlipse
-
-# STS (Spring Tool Suite)
-.springBeans
-
-# Code Recommenders
-.recommenders/
-
-# Annotation Processing
-.apt_generated/
-.apt_generated_test/
-
-# Scala IDE specific
-.cache-main
-.scala_dependencies
-.worksheet
-
-### Eclipse Patch ###
-.sts4-cache/
-
-### Intellij ###
-.idea/
-*.iws
-out/
-
-### Java ###
-*.class
-*.log
-*.ctxt
-.mtj.tmp/
-
-# Package files
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-hs_err_pid*
-replay_pid*
-
-### macOS ###
+########################################
+# macOS
+########################################
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -103,25 +27,135 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-### macOS Patch ###
 *.icloud
 
-### Maven ###
+
+########################################
+# Windows
+########################################
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.stackdump
+*.lnk
+
+
+########################################
+# Linux
+########################################
+.Trash-*
+.cache/
+.config/
+.local/
+*.directory
+*~
+*.tmp
+lost+found/
+
+
+################################################################################
+# JAVA & BUILD ARTIFACTS
+################################################################################
+
+# Compiled output
+*.class
+*.ctxt
+*.log
+
+# Java packaged archives (avoid committing builds)
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*
+
+
+################################################################################
+# MAVEN
+################################################################################
+
+# Build output
 target/
+
+# Maven internal metadata
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
 release.properties
 dependency-reduced-pom.xml
+
+# Build number & wrapper
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
-# Eclipse m2e generated files
+
+################################################################################
+# INTELLIJ IDEA
+################################################################################
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+out/
+
+
+################################################################################
+# ECLIPSE
+################################################################################
+
+.metadata/
 .project
 .classpath
+.settings/
+.loadpath
+.recommenders/
 
-# End of file
+bin/
+tmp/
+
+*.tmp
+*.bak
+*.swp
+
+
+################################################################################
+# VISUAL STUDIO CODE
+################################################################################
+
+.vscode/
+.history/
+*.vsix
+
+
+################################################################################
+# CLAUDE CODE
+################################################################################
+
 .claude/
+
+
+################################################################################
+# GENERIC BUILD & TEMP
+################################################################################
+
+build/
+dist/
+
+*.swp
+*.swo
+*.bak
+*.tmp
+*~.nib
