@@ -1,5 +1,7 @@
 # Master Java Design Patterns
 
+![Build Status](https://github.com/darbyluv2code/master-java-design-patterns/actions/workflows/build.yml/badge.svg)
+
 Source code for the course: [Master Java Design Patterns](https://www.luv2code.com/master-java-design-patterns-github)
 
 If you have questions or need tech support, post your questions to the [classroom discussion forum](https://www.luv2code.com/master-java-design-patterns-github).
