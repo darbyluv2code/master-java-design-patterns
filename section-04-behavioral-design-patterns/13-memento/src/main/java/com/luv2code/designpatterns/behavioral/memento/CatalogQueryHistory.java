@@ -14,51 +14,63 @@ public class CatalogQueryHistory {
 
     private static final int MAX_HISTORY = 20;
 
-    private Deque<CatalogQueryState.QuerySnapshot> undoCollection = new ArrayDeque<>();
+    private Deque<CatalogQueryState.QuerySnapshot> undoStack =
+            new ArrayDeque<>();
 
-    private Deque<CatalogQueryState.QuerySnapshot> redoCollection = new ArrayDeque<>();
+    private Deque<CatalogQueryState.QuerySnapshot> redoStack =
+            new ArrayDeque<>();
 
-    private void pushBounded(Deque<CatalogQueryState.QuerySnapshot> theCollection,
-                             CatalogQueryState.QuerySnapshot snapshot) {
-
-        if (theCollection.size() == MAX_HISTORY) {
-            theCollection.removeLast();
-        }
-
-        theCollection.push(snapshot);
-    }
 
     public void saveBeforeChange(CatalogQueryState originator) {
 
-        redoCollection.clear();
-        pushBounded(undoCollection, originator.createSnapshot());
+        redoStack.clear();
+        pushBounded(undoStack, originator.createSnapshot());
     }
 
     public boolean undo(CatalogQueryState originator) {
 
-        if (undoCollection.isEmpty()) {
+        if (undoStack.isEmpty()) {
             return false;
         }
 
-        pushBounded(redoCollection, originator.createSnapshot());
-        originator.restore(undoCollection.pop());
+        pushBounded(redoStack, originator.createSnapshot());
+        originator.restore(undoStack.pop());
 
         return true;
     }
 
     public boolean redo(CatalogQueryState originator) {
 
-        if (redoCollection.isEmpty()) {
+        if (redoStack.isEmpty()) {
             return false;
         }
 
-        pushBounded(undoCollection, originator.createSnapshot());
-        originator.restore(redoCollection.pop());
+        pushBounded(undoStack, originator.createSnapshot());
+        originator.restore(redoStack.pop());
 
         return true;
     }
 
+    private void pushBounded(Deque<CatalogQueryState.QuerySnapshot> stack,
+                             CatalogQueryState.QuerySnapshot snapshot) {
+
+        if (stack.size() == MAX_HISTORY) {
+            stack.removeLast();
+        }
+
+        stack.push(snapshot);
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
