@@ -20,8 +20,8 @@ public class CommandParser {
 
         String trimmedInput = inputCommand.trim();
 
-        // check for AND expressions
-        int andIndex = trimmedInput.indexOf(AND_SEPARATOR);
+        // check for AND expressions ... ignore case
+        int andIndex = trimmedInput.toUpperCase().indexOf(AND_SEPARATOR);
         if (andIndex != -1) {
             // we found AND
             String leftInput = trimmedInput.substring(0, andIndex).trim();

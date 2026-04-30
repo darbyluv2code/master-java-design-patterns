@@ -19,7 +19,7 @@ public class MainApp {
         runCommand("/dance now", "Angel", commandParser);
 
         System.out.println("\n--- Demo: Chained Commands with AND ---");
-        runCommand("/join python-room AND /remind Customer meeting at 10am",
+        runCommand("/join python-room And /remind Customer meeting at 10am",
                 "Peter", commandParser);
 
     }
