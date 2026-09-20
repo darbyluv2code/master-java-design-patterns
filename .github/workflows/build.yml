@@ -12,11 +12,11 @@ jobs:
     steps:
     - uses: actions/checkout@v6.0.2
 
-    - name: Set up JDK 26
-      uses: actions/setup-java@v5.2.0
+    - name: Set up JDK 27
+      uses: actions/setup-java@v6.0.1
       with:
-        java-version: '26'
-        distribution: 'temurin'
+        java-version: '27'
+        distribution: 'oracle-openjdk'
         cache: 'maven'
 
     - name: Build all projects in section
@@ -39,11 +39,11 @@ jobs:
     steps:
     - uses: actions/checkout@v6.0.2
 
-    - name: Set up JDK 26
-      uses: actions/setup-java@v5.2.0
+    - name: Set up JDK 27
+      uses: actions/setup-java@v6.0.1
       with:
-        java-version: '26'
-        distribution: 'temurin'
+        java-version: '27'
+        distribution: 'oracle-openjdk'
         cache: 'maven'
 
     - name: Build all projects in section
@@ -66,11 +66,11 @@ jobs:
     steps:
     - uses: actions/checkout@v6.0.2
 
-    - name: Set up JDK 26
-      uses: actions/setup-java@v5.2.0
+    - name: Set up JDK 27
+      uses: actions/setup-java@v6.0.1
       with:
-        java-version: '26'
-        distribution: 'temurin'
+        java-version: '27'
+        distribution: 'oracle-openjdk'
         cache: 'maven'
 
     - name: Build all projects in section
